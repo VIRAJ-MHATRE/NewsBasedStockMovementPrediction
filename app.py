@@ -26,6 +26,7 @@ nltk.download('punkt', quiet=True)
 nltk.download('averaged_perceptron_tagger', quiet=True)  # This is the correct resource
 nltk.download('averaged_perceptron_tagger_eng', quiet=True)  # This is the correct resource
 nltk.download('wordnet', quiet=True)
+nltk.download('vader_lexicon', quiet=True)  # VADER lexicon for sentiment analysis
 
 
 # Load models
