@@ -236,9 +236,25 @@ with st.form(key='input_form'):
             # Name Entity Recognition
             def ner__(text):
                 entities = ner_pipeline(text)
-                person_count = sum(1 for entity in entities if entity['entity_group'] == 'PER')
-                organization_count = sum(1 for entity in entities if entity['entity_group'] == 'ORG')
-                location_count = sum(1 for entity in entities if entity['entity_group'] == 'LOC')
+                
+                # Initialize counts
+                person_count = 0
+                organization_count = 0
+                location_count = 0
+                
+                # Check what the entities look like
+                for entity in entities:
+                    print(entity)  # Debug: see what the entity structure is
+                    
+                    # Adjust based on the actual structure of the entity dictionary
+                    if 'entity_group' in entity:
+                        if entity['entity_group'] == 'PER':
+                            person_count += 1
+                        elif entity['entity_group'] == 'ORG':
+                            organization_count += 1
+                        elif entity['entity_group'] == 'LOC':
+                            location_count += 1
+
                 return person_count, organization_count, location_count
 
             inputdf['person_count'], inputdf['organization_count'], inputdf['location_count'] = zip(*df['Text'].apply(ner__))
