@@ -1,4 +1,5 @@
 import nltk 
+import NLTK_DATA
 import pickle
 import streamlit as st
 import pandas as pd
