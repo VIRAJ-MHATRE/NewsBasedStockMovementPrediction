@@ -15,7 +15,8 @@ import os
 import pickle
 
 # Add custom nltk data path if needed
-nltk.data.path.append('./nltk_data')  # Adjust the path if necessary
+import nltk
+nltk.data.path.append('C:\\Users\\Admin\\AppData\\Roaming\\nltk_data')  # Use your actual path
 
 try:
     nltk.data.find('tokenizers/punkt')
