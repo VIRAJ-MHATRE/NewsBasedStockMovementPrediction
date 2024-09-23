@@ -40,7 +40,10 @@ nltk.download('averaged_perceptron_tagger_eng', quiet=True)  # This is the corre
 nltk.download('wordnet', quiet=True)
 nltk.download('vader_lexicon', quiet=True)  # VADER lexicon for sentiment analysis
 
+from transformers import pipeline
 
+model_name = "dbmdz/bert-large-cased-finetuned-conll03-english"
+ner_pipeline = pipeline("ner", model=model_name)
 # Load models
 @st.cache_resource
 def load_xgb_close_class():
