@@ -18,8 +18,13 @@ import pickle
 ner_pipeline = pipeline('ner', grouped_entities=True)
 
 
+# Download necessary NLTK resources
+nltk.download('stopwords', quiet=True)
 
-
+nltk.download('stopwords', quiet=True)
+nltk.download('punkt', quiet=True)
+nltk.download('averaged_perceptron_tagger', quiet=True)
+nltk.download('wordnet', quiet=True)
 
 
 # Load models
