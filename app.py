@@ -14,6 +14,17 @@ from transformers import pipeline
 import os
 import pickle
 
+
+# Add custom nltk data path if needed
+nltk.data.path.append('./nltk_data')  # Adjust the path if necessary
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+# Other necessary downloads...
+
 # Load the NER pipeline
 ner_pipeline = pipeline('ner', grouped_entities=True)
 nltk.data.path.append('./nltk_data')
