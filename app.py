@@ -23,7 +23,8 @@ try:
 except LookupError:
     nltk.download('punkt')
 
-# Other necessary downloads...
+import nltk
+nltk.download('punkt')
 
 # Load the NER pipeline
 ner_pipeline = pipeline('ner', grouped_entities=True)
