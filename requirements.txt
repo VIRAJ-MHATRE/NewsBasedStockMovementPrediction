@@ -5,3 +5,5 @@ plotly
 nrclex
 textblob
 transformers
+tensorflow
+torch
