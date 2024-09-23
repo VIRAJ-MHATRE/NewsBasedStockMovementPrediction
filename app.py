@@ -43,8 +43,11 @@ nltk.download('vader_lexicon', quiet=True)  # VADER lexicon for sentiment analys
 
 from transformers import pipeline
 
+
 model_name = "dbmdz/bert-large-cased-finetuned-conll03-english"
-ner_pipeline = pipeline("ner", model=model_name)
+model_pipeline = pipeline("token-classification", model=model_name, revision="f2482bf")
+
+
 # Load models
 @st.cache_resource
 def load_xgb_close_class():
