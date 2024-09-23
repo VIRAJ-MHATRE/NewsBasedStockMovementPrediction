@@ -1,3 +1,7 @@
 nltk
-pandas
 streamlit
+pandas
+plotly
+nrclex
+textblob
+transformers
