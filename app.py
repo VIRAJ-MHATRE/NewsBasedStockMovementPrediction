@@ -17,7 +17,8 @@ import pickle
 # Load the NER pipeline
 ner_pipeline = pipeline('ner', grouped_entities=True)
 nltk.data.path.append('./nltk_data')
-
+from textblob import TextBlob
+TextBlob.download_corpora()
 
 
 # Download necessary NLTK resources
