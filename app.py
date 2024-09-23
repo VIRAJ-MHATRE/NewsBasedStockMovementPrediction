@@ -1,5 +1,4 @@
 import nltk 
-import NLTK_DATA
 import pickle
 import streamlit as st
 import pandas as pd
@@ -15,7 +14,7 @@ from transformers import pipeline
 import os
 import pickle
 
-
+NLTK_DATA.data.path.append('./nltk_data')
 # Add custom nltk data path if needed
 nltk.data.path.append('./nltk_data')  # Adjust the path if necessary
 
