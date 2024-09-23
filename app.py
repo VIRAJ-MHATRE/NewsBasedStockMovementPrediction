@@ -24,7 +24,7 @@ except LookupError:
     nltk.download('punkt')
 
 import nltk
-nltk.download('punkt')
+nltk.download('punkt_tab')
 
 # Load the NER pipeline
 ner_pipeline = pipeline('ner', grouped_entities=True)
