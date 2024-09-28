@@ -1,10 +1,19 @@
-nltk
-streamlit
-pandas
-plotly
-nrclex
-textblob
-transformers
-tensorflow
-torch
-tf-keras
+# nltk
+# streamlit
+# pandas
+# plotly
+# nrclex
+# textblob
+# transformers
+# tensorflow
+# torch
+# tf-keras
+
+streamlit==1.38.0
+pandas==2.2.2
+plotly==5.23.0
+nltk==3.8.2
+transformers==4.44.2
+xgboost==2.1.1
+textblob==0.17.1
+nrclex==3.0.0
