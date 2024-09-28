@@ -14,19 +14,19 @@ from transformers import pipeline
 import os
 import pickle
 
-# Add custom nltk data path if needed
-import nltk
-nltk.data.path.append('C:\\Users\\Admin\\AppData\\Roaming\\nltk_data')  # Use your actual path
+# # Add custom nltk data path if needed
+# import nltk
+# nltk.data.path.append('C:\\Users\\Admin\\AppData\\Roaming\\nltk_data')  # Use your actual path
 
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+# try:
+#     nltk.data.find('tokenizers/punkt')
+# except LookupError:
+#     nltk.download('punkt')
 
-import nltk
-nltk.download('punkt_tab')
+# import nltk
+# nltk.download('punkt_tab')
 
-# Load the NER pipeline
+# # Load the NER pipeline
 ner_pipeline = pipeline('ner', grouped_entities=True)
 nltk.data.path.append('./nltk_data')
 
@@ -44,8 +44,8 @@ nltk.download('vader_lexicon', quiet=True)  # VADER lexicon for sentiment analys
 from transformers import pipeline
 
 
-model_name = "dbmdz/bert-large-cased-finetuned-conll03-english"
-model_pipeline = pipeline("token-classification", model=model_name, revision="f2482bf")
+# model_name = "dbmdz/bert-large-cased-finetuned-conll03-english"
+# model_pipeline = pipeline("token-classification", model=model_name, revision="f2482bf")
 
 
 # Load models
