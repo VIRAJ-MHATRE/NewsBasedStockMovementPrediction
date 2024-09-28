@@ -9,6 +9,7 @@ nrclex
 xgboost
 tensorflow
 torch
+tf-keras  # Include this instead of keras
 
 # Additional dependencies
 absl-py  
@@ -50,7 +51,6 @@ jupyter
 jupyter_client  
 jupyter_core  
 jupyterlab  
-keras  
 Markdown  
 matplotlib  
 numpy  
